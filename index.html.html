@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/USER/Downloads/html%20proj/index3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me?</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: pink;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  h1 {
+    margin-bottom: 30px;
+    color: #ff4d6d;
+  }
+  button {
+    font-size: 22px;
+    padding: 12px 28px;
+    margin: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  #yes {
+    background: #ff4d6d;
+    color: white;
+  }
+  #no {
+    background: #666;
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Do you love me? ❤️</h1>
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+  </div>
+
+<script>
+  const noBtn = document.getElementById("no");
+  let size = 1;
+
+  noBtn.addEventListener("click", () => {
+    size -= 0.2; // shrink each click
+    if (size <= 0) {
+      noBtn.remove(); // remove when too small
+    } else {
+      noBtn.style.transform = `scale(${size})`;
+    }
+  });
+
+  document.getElementById("yes").addEventListener("click", () => {
+    alert("Yay! I love you too ❤️");
+  });
+</script>
+
+
+</body></html>
